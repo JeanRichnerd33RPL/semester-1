@@ -1,5 +1,4 @@
-package tugasKelasGuru;
-
+package tugas;
 public class Guru {
     String nama,mapel,alamat;
     int id;
