@@ -4,15 +4,13 @@ public class Siswa{
     int nis;
     double ipk;
     // constructor biasanya sama dengan nama class
-    public Siswa(){
-        nama="";
-        ipk=0;
-        nis=0;
-    }
-    public void setAll(String a, double b, int c){
+    public Siswa(String a, double b, int c){
         ipk=b;
         nis=c;
         nama=a;
+    }
+    public void print(){
+        System.out.println("==============================================");
         System.out.println("nama : "+nama+" | ipk : "+ ipk +" | nis : "+nis);
     }
 }

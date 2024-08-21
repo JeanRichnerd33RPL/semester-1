@@ -2,16 +2,14 @@ package tugas;
 public class Guru {
     String nama,mapel,alamat;
     int id;
-    public Guru(){
-        nama="";
-        mapel="";
-        alamat="";
-        id=0;
+    public Guru(String a, String b, String c, int d){
+        nama=a;
+        mapel=b;
+        alamat=c;
+        id=d;
     }
-    public void setGuru(String n, String a, String m, int i){
-        nama=n;
-        alamat=a;
-        mapel=m;
-        id=i;
+    public void print(){
+        System.out.println("======================================================================");
+        System.out.println("nama : "+nama+" | mapel : "+ mapel +" | alamat : "+alamat +" | id : "+id);
     }
 }
