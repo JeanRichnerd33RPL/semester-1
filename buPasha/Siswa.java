@@ -9,13 +9,10 @@ public class Siswa{
         ipk=0;
         nis=0;
     }
-    public void studentSetIpk(double x){
-        ipk=x;
-    }
-    public void studentSetNis(int x){
-        nis=x;
-    }
-    public void studentSetNama(String x){
-        nama=x;
+    public void setAll(String a, double b, int c){
+        ipk=b;
+        nis=c;
+        nama=a;
+        System.out.println("nama : "+nama+" | ipk : "+ ipk +" | nis : "+nis);
     }
 }
