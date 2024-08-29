@@ -11,6 +11,10 @@ public class TesSiswa {
         ochiTuru.print( );
         Siswa idk=new Siswa("idk",3.75, 37377);
         idk.print();
+        Object[] attributeShabri= shabriMewing.getAttributes();
+        System.out.println(attributeShabri[0]);
+        idk.setAll(new Object[]{363737});
+        idk.print();
 
     }
 }

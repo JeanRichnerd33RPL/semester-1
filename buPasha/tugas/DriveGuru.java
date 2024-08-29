@@ -12,11 +12,11 @@ public class DriveGuru {
         pakAndre.setGuru("Andre", "Singosari", "Bahasa Inggris", 3);
         buPasha.setGuru("Pasha", "Malang daerah smp 5", "Produktif RPL", 4);
         pakChusni.setGuru("Chusni", "Ijen", "Kesiswaan", 5);
-        System.out.println(pakDiaur.nama);
-        System.out.println(buFeni.nama);
-        System.out.println(pakAndre.nama);
-        System.out.println(buPasha.nama);
-        System.out.println(pakChusni.nama);
+        System.out.println(pakDiaur.getNama());
+        System.out.println(buFeni.getNama());
+        System.out.println(pakAndre.getNama());
+        System.out.println(buPasha.getNama());
+        System.out.println(pakChusni.getNama());
     }
 }
 

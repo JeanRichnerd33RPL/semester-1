@@ -11,7 +11,6 @@ public class tesSiswa2 {
                 in.nextLine();
                 System.out.println("lanjut?");
                 credensial=in.nextLine();
-
             }
 
     }
