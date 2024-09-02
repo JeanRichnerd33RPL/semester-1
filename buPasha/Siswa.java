@@ -4,6 +4,7 @@ public class Siswa{
     private int nis;
     private double ipk;
 
+
     // constructor biasanya sama dengan nama class
     public Siswa(String a, double b, int c){
         ipk=b;
