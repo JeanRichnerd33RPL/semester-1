@@ -4,17 +4,14 @@ public class Employee {
         String nama;
     double gaji;
 
-    public String getNama() {
-        return this.nama;
+    public Object[] getAttributes() {
+        return new Object[]{nama, gaji};
     }
 
     public void setNama(String nama) {
         this.nama = nama;
     }
 
-    public double getGaji() {
-        return this.gaji;
-    }
 
     public void setGaji(double gaji) {
         this.gaji = gaji;

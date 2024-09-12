@@ -25,7 +25,7 @@ public class tesSiswa2 {
                     }
                     else if((double) dummyObject[2] >90 && (double) dummyObject[2] <=100){
                         System.out.println(dummy.getAttributes()[0] + " Memiliki Nilai A");
-                    } else{
+                    } else if((double) dummyObject[2] < 0 || (double) dummyObject[2]>100){
                         throw new Error("Data anda eror, please try again");
                     }
                 in.nextLine();
