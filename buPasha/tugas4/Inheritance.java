@@ -91,7 +91,7 @@ class CD extends Product {
 
     @Override
     public void print(){
-        System.out.println("Artist : "+ artist +" | "+ " Total Song : "+numSong + " | " + " Label : "+label);
+        System.out.println("Nama : " + super.getName() + " | " + " Quantity : "+super.getQuantity() + " | " + " Price : "+super.getPrice() + " Number : "+super.getNumber()+"Artist : "+ artist +" | "+ " Total Song : "+numSong + " | " + " Label : "+label);
     }
 }
 
@@ -133,7 +133,7 @@ class DVD extends Product {
     }
     @Override
     public void print(){
-        System.out.println("Length : "+ length +" | "+ " Rating : "+ rating + " | " + " Studio : "+studio);
+        System.out.println("Nama : " + super.getName() + " | " + " Quantity : "+super.getQuantity() + " | " + " Price : "+super.getPrice() + " Number : "+super.getNumber()+" Length : "+ length +" | "+ " Rating : "+ rating + " | " + " Studio : "+studio);
     }
 }
 

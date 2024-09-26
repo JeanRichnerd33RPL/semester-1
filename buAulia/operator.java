@@ -18,8 +18,6 @@ public class operator {
                 System.out.print(obj);
             }
             System.out.println(" ");
-
-
         };
 
 
