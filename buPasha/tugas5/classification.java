@@ -1,5 +1,6 @@
 package tugas5;
 
+import java.time.Year;
 import java.util.Scanner;
 
 class Person{
@@ -74,7 +75,7 @@ class Student extends Person{
 
 class Teacher extends Person{
     private String subject;
-
+    private int nowIn;
     public String getSubject() {
         return this.subject;
     }
@@ -82,10 +83,16 @@ class Teacher extends Person{
     public void setSubject(String subject) {
         this.subject = subject;
     }
+    public int lamaMengajar(){
+        int yearNow=Year.now().getValue();
+        int hasil=nowIn-yearNow;
+        return (hasil);
+    }
 
-    public Teacher(String Name, String Subject, int Age){
+    public Teacher(String Name, String Subject, int Age, int yearIn){
         super(Name, Age);
         this.subject=Subject;
+        this.nowIn=yearIn;
     }
     public void print(){
         System.out.println("Nama : "+ super.getName() +" | "+ "Age : "+ super.getAge()+" | " + "Subject : "+ this.subject +" | ");
@@ -111,14 +118,14 @@ class Fulltime extends Teacher{
     public void setUnit(String unit) {
         this.unit = unit;
     }
-    public Fulltime(String Name, String Subject, String Unit, int Age, int AnualSalary){
-        super(Name, Subject, Age);
+    public Fulltime(String Name, String Subject, String Unit, int Age, int AnualSalary, int yearIn){
+        super(Name, Subject, Age, yearIn);
         this.anualSalary=AnualSalary;
         this.unit=Unit;
         print();
     }
     public void print(){
-        System.out.println("Nama : "+ super.getName() +" | "+ "Age : "+ super.getAge()+" | " + "Subject : "+ super.getSubject() +" | "  + "Anual Salary : "+ this.anualSalary +" | "  + "Unit : "+ this.unit +" | ");
+        System.out.println("Nama : "+ super.getName() +" | "+ "Age : "+ super.getAge()+" | " + "Subject : "+ super.getSubject() +" | "  + "Anual Salary : "+ this.anualSalary +" | "  + "Unit : "+ this.unit +" | " + "Lama Mengajar : "+super.lamaMengajar()+" Tahun");
     }
 }
 class PartTime extends Teacher{
@@ -137,16 +144,17 @@ class PartTime extends Teacher{
     public void setSalary(int HouseWorked){
         this.salary=HouseWorked*20*10000;
     }
-    public PartTime(String Name, String Subject, int Age, int HouseWorked){
-        super(Name, Subject, Age);
+    public PartTime(String Name, String Subject, int Age, int HouseWorked, int YearIn){
+        super(Name, Subject, Age, YearIn);
         this.houseWorked= HouseWorked;
         setSalary(HouseWorked);
         print();
     }
     public void print(){
-        System.out.println("Nama : "+ super.getName() +" | "+ "Age : "+ super.getAge()+" | " + "Subject : "+ super.getSubject() +" | "  + "House Workde : "+ this.houseWorked+" | "+ "Gaji :" +this.salary);
+        System.out.println("Nama : "+ super.getName() +" | "+ "Age : "+ super.getAge()+" | " + "Subject : "+ super.getSubject() +" | "  + "House Workde : "+ this.houseWorked+" | "+ "Gaji :" +this.salary + " | " + "Lama Mengajar : "+super.lamaMengajar()+" Tahun");
     }
 }
+
 
 public class classification {
     @SuppressWarnings("resource")
@@ -166,13 +174,13 @@ public class classification {
                 System.out.println("Pilih Cara Kerja : FullTime/PartTime");
                 type=in.nextLine();
                 if(type.equalsIgnoreCase("FullTime")){
-                    System.out.println("masukkan Nama | Subject | Unit | Umur | Gaji");
+                    System.out.println("masukkan Nama | Subject | Unit | Umur | Gaji | Year In");
                     @SuppressWarnings("unused")
-                    Fulltime dummy=new Fulltime(in.nextLine(),in.nextLine(),in.nextLine(),in.nextInt(),in.nextInt());
+                    Fulltime dummy=new Fulltime(in.nextLine(),in.nextLine(),in.nextLine(),in.nextInt(),in.nextInt(), in.nextInt());
                 } else if(type.equalsIgnoreCase("PartTime")){
-                    System.out.println("masukkan Nama | Subject | Umur | Jam Kerja");
+                    System.out.println("masukkan Nama | Subject | Umur | Jam Kerja | Year In");
                     @SuppressWarnings("unused")
-                    PartTime dummy=new PartTime(in.nextLine(), in.nextLine(), in.nextInt(), in.nextInt());
+                    PartTime dummy=new PartTime(in.nextLine(), in.nextLine(), in.nextInt(), in.nextInt(), in.nextInt());
                 } else{
                     throw new Error("error please make sure your input in valid");
                 }
@@ -184,5 +192,9 @@ public class classification {
             credensial = in.nextLine();
             i++;
         }
+        print();
+    }
+    public static void print(){
+        System.out.println("done");
     }
 }
