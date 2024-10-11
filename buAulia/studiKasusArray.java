@@ -10,7 +10,7 @@ public class studiKasusArray {
             Scanner input = new Scanner(System.in);
             System.out.println("gunakan tanda '-' untuk memisahkan antara nama barang dan harga");
             System.out.println("masukkan List Nama | Harga");
-            String item[] = input.nextLine().split("-");
+            String item[] = input.nextLine().split(" - ");
             list.add(item);
             System.out.println("Lanjut memilih ? (yes/no)");
             condition = input.nextLine();
